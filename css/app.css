@@ -9,12 +9,16 @@
     border: none;
     padding: 0;
     margin: 0;
-    font-family: 'Belanosima', sans-serif;
+    font-family:  Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
 
 body{
     height: 500rem;
+}
+body header img{
+    width: 100%;
+    height: 100%;
 }
 /* UTILIDADES */
 
@@ -25,12 +29,10 @@ body{
     overflow: hidden;
 }
 
-.header{
-}
 .navegacion{
     height: 2rem;
     display: flex;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     justify-content: space-between;
     margin-bottom: 2rem;
 }
@@ -78,24 +80,115 @@ body{
 
 .hero{
     display: flex;
-    gap: 1rem;
+    gap: 6rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .hero h1{
-    font-size: 4rem;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
 }
-.hero-img{
-    flex-basis: 40%;
-}
+
 .hero-content{
     flex-basis: 60%;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end   ;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
 }
+.hero-content h1{
+    font-size: 3rem;
+}
+.hero-content p{
+    font-size: 1.2rem;
+    color: rgb(178, 178, 178);
+}
+.hero button{
+    padding: 1rem 2rem;
+    color:whitesmoke;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 1.3rem;
+    cursor: pointer;
+    margin: 2rem 0;
+}
+.hero button:hover{
+    background: #d57eeb;
+}
+
+.hero-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-basis: 40%;
+}
+.hero-img .bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70%;
+    width: 100%;
+    background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+    border-radius: 6rem;
+    z-index: 1;
+}
+
 .hero-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 99;
+}
+
+main .stats{
+    margin: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    /* flex-wrap: wrap; */
+}
+main .stats h2{
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+main .stats .box{
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+}
+main .stats .box h3{
+    font-size: 3rem;
+    color: #5cc9e2;
+    margin: 1rem 0;
+}
+main .stats .box p{
+    font-size: 1.2rem;
+}
+
+
+/* work */
+
+.work{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    background: #d57eeb;
+    gap: 3rem;
+    padding: 2rem;
+}
+.work .features{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
 }
 /* MEDIA QUERIES */
 
