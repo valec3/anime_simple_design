@@ -1,0 +1,121 @@
+:root{
+
+    --primario:#234;
+}
+
+*{
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Belanosima', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 500rem;
+}
+/* UTILIDADES */
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+    overflow: hidden;
+}
+
+.header{
+}
+.navegacion{
+    height: 2rem;
+    display: flex;
+    padding: 2rem 0;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+/* NAV */
+.menu{
+    /* position: fixed; */
+    top: 1rem;
+    right: .5rem;
+    color: black;
+    padding: .3rem;
+    /* box-shadow: 0 0 6px rgba(0, 0, 0, .3); */
+    cursor: pointer;
+    display: none; 
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.navbar a{
+    padding: 1rem 2rem;
+    color: black;
+    font-size: 1.2rem;
+    position: relative;
+}
+.navbar a::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: #d57eeb;
+    transition: width .5s;
+}
+.navbar a:hover{
+    color: #d57eeb;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+/* HERO */
+
+.hero{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1{
+    font-size: 4rem;
+}
+.hero-img{
+    flex-basis: 40%;
+}
+.hero-content{
+    flex-basis: 60%;
+}
+.hero-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* MEDIA QUERIES */
+
+@media (max-width: 778px){
+    
+    .navbar{
+        background: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+        height: 100vh;
+        flex-direction: column;
+        right: -100%;
+        padding: 5rem;
+        position: absolute;
+        box-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
+        transition: right .5s;
+    }
+    .navbar.toggle{
+        right: 0;
+    }
+    .menu{
+        display: block;
+        z-index: 999;
+    }
+}
